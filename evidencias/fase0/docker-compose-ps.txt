@@ -1,0 +1,6 @@
+SERVICE      IMAGE                         STATUS
+grafana      grafana/grafana:13.2.3        Up 21 seconds (healthy)
+inventario   dyasmonitoreo/tienda:1.0      Up 31 seconds (healthy)
+jaeger       jaegertracing/jaeger:2.21.0   Up 32 seconds
+pedidos      dyasmonitoreo/tienda:1.0      Up 20 seconds (healthy)
+prometheus   prom/prometheus:v3.15.0       Up 32 seconds (healthy)

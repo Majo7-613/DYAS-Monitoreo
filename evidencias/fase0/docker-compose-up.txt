@@ -1,0 +1,106 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 530B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.06kB 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/maven:3.9.16-eclipse-temurin-21-noble
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-noble
+#4 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 189B 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 DONE 0.0s
+
+#7 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:21-jre-noble@sha256:cd35bb33859641c5374415826a5951845104093eaa401cbe9d3d9023444f1c13
+#7 resolve docker.io/library/eclipse-temurin:21-jre-noble@sha256:cd35bb33859641c5374415826a5951845104093eaa401cbe9d3d9023444f1c13 0.0s done
+#7 DONE 0.1s
+
+#8 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-21-noble@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320
+#8 resolve docker.io/library/maven:3.9.16-eclipse-temurin-21-noble@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320 0.0s done
+#8 DONE 0.1s
+
+#6 [internal] load build context
+#6 transferring context: 3.51kB 0.0s done
+#6 DONE 0.0s
+
+#9 [stage-1 3/4] WORKDIR /app
+#9 CACHED
+
+#10 [build 3/6] COPY pom.xml .
+#10 CACHED
+
+#11 [build 4/6] RUN mvn -B -q dependency:go-offline
+#11 CACHED
+
+#12 [stage-1 2/4] RUN groupadd --system tienda && useradd --system --gid tienda --no-create-home tienda
+#12 CACHED
+
+#13 [build 2/6] WORKDIR /app
+#13 CACHED
+
+#14 [build 5/6] COPY src ./src
+#14 CACHED
+
+#15 [build 6/6] RUN mvn -B -q package -DskipTests
+#15 CACHED
+
+#16 [stage-1 4/4] COPY --from=build /app/target/tienda.jar app.jar
+#16 CACHED
+
+#17 exporting to image
+#17 exporting layers 0.0s done
+#17 exporting manifest sha256:f0dda319b58baa681d0fb627fb9def71c41cd9b35c0629164055076072e1f3f6 done
+#17 exporting config sha256:440d14a61cfaca1ea458aaa35157e1d3a4d3dd7fc76250fc4b16ec5a7196b7cb done
+#17 exporting attestation manifest sha256:082cc4c3c5d5f57796af283357c0b82bdbb0ff330f3cfdaea167f92fab8ff219 0.0s done
+#17 exporting manifest list sha256:73a31acb5eb96cfcc4f22d46615a2a08267c5d087a466b7361deba8e30cca6d6 0.0s done
+#17 naming to docker.io/dyasmonitoreo/tienda:1.0 done
+#17 unpacking to docker.io/dyasmonitoreo/tienda:1.0 0.0s done
+#17 DONE 0.2s
+
+#18 resolving provenance for metadata file
+#18 DONE 0.0s
+ dyasmonitoreo/tienda:1.0  Built
+ Network dyasmonitoreo_default  Creating
+ Network dyasmonitoreo_default  Created
+ Container dyasmonitoreo-jaeger-1  Creating
+ Container dyasmonitoreo-prometheus-1  Creating
+ Container dyasmonitoreo-prometheus-1  Created
+ Container dyasmonitoreo-jaeger-1  Created
+ Container dyasmonitoreo-inventario-1  Creating
+ Container dyasmonitoreo-grafana-1  Creating
+ Container dyasmonitoreo-inventario-1  Created
+ Container dyasmonitoreo-pedidos-1  Creating
+ Container dyasmonitoreo-grafana-1  Created
+ Container dyasmonitoreo-pedidos-1  Created
+ Container dyasmonitoreo-prometheus-1  Starting
+ Container dyasmonitoreo-jaeger-1  Starting
+ Container dyasmonitoreo-jaeger-1  Started
+ Container dyasmonitoreo-inventario-1  Starting
+ Container dyasmonitoreo-prometheus-1  Started
+ Container dyasmonitoreo-prometheus-1  Waiting
+ Container dyasmonitoreo-inventario-1  Started
+ Container dyasmonitoreo-inventario-1  Waiting
+ Container dyasmonitoreo-prometheus-1  Healthy
+ Container dyasmonitoreo-grafana-1  Starting
+ Container dyasmonitoreo-inventario-1  Healthy
+ Container dyasmonitoreo-pedidos-1  Starting
+ Container dyasmonitoreo-grafana-1  Started
+ Container dyasmonitoreo-pedidos-1  Started
+ Container dyasmonitoreo-jaeger-1  Waiting
+ Container dyasmonitoreo-inventario-1  Waiting
+ Container dyasmonitoreo-pedidos-1  Waiting
+ Container dyasmonitoreo-prometheus-1  Waiting
+ Container dyasmonitoreo-grafana-1  Waiting
+ Container dyasmonitoreo-inventario-1  Healthy
+ Container dyasmonitoreo-prometheus-1  Healthy
+ Container dyasmonitoreo-jaeger-1  Healthy
+ Container dyasmonitoreo-pedidos-1  Healthy
+ Container dyasmonitoreo-grafana-1  Healthy

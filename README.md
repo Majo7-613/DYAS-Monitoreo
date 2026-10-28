@@ -5,6 +5,16 @@ Se asume que conoces Docker y Docker Compose. En la **entrega 3 del proyecto del
 
 ---
 
+## Integrantes
+
+| Nombre | Correo institucional |
+|---|---|
+| María José Almanza Caviedes | mariaalmca@unisabana.edu.co |
+
+La documentación del taller (evidencias, análisis y reflexión) está en el [Wiki del repositorio](https://github.com/Majo7-613/DYAS-Monitoreo/wiki).
+
+---
+
 ## Objetivo General
 
 Comprender, configurar y aplicar las prácticas de **monitoreo y observabilidad** sobre una aplicación **Java + Spring Boot** desplegada con **Docker Compose**, usando **Spring Boot Actuator y Micrometer** para publicar métricas, **Prometheus** para recolectarlas y evaluar alertas, **Grafana** para construir dashboards, y **OpenTelemetry con Jaeger** para seguir una petición a través de varios servicios, de forma que el equipo pueda detectar y diagnosticar fallas a partir de datos y no de suposiciones.
